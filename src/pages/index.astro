@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Nav from "../components/Nav.astro";
 
 type Member = {
   name: string;
@@ -15,6 +16,7 @@ const members: Member[] = [
 ---
 
 <Layout title="Open Source USACH">
+  <Nav></Nav>
   <p class="instructions">
     Comunidad de estudiantes y amigos de la Universidad de Santiago de Chile,
     colaborando en proyectos open-source!
@@ -30,7 +32,7 @@ const members: Member[] = [
         description="La manera más fácil de encontrar prácticas y primeros trabajos en Ingeniería de Software."
       />
       <Card
-        href="/notReady"
+        href="https://github.com/open-source-usach/cursosusach-honojs-api"
         title="CursosUSACH"
         description="Mira qué opinan otros estudiantes acerca de ramos de la USACH."
       />
