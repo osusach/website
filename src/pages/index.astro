@@ -2,29 +2,43 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
+import Link from "../components/Link";
+
+type Role = "Development" | "Design" | "Product";
 
 type Member = {
   name: string;
   link: string;
+  role: Role;
 };
 
 const members: Member[] = [
-  { name: "René Cáceres", link: "https://github.com/panquequelol" },
-	{name: "Ignacio Lara", link: "https://github.com/kappita"},
-	{name: "Joaquín Saldivia", link: "https://github.com/Klefur"}
+  {
+    name: "René Cáceres",
+    role: "Development",
+    link: "https://github.com/panquequelol",
+  },
+  {
+    name: "Ignacio Lara",
+    role: "Development",
+    link: "https://github.com/kappita",
+  },
+  {
+    name: "Joaquín Saldivia",
+    role: "Development",
+    link: "https://github.com/Klefur",
+  },
 ];
 ---
 
 <Layout title="Open Source USACH">
-  <Nav></Nav>
+  <Nav />
   <p class="instructions">
     Comunidad de estudiantes y amigos de la Universidad de Santiago de Chile,
     colaborando en proyectos open-source!
   </p>
   <section class="my-4">
-    <h2 class="text-neutral-200 font-bold text-lg">
-      Estamos trabajando en
-    </h2>
+    <h2 class="text-neutral-200 font-bold text-lg">Estamos contruyendo</h2>
     <ul class="my-2">
       <Card
         href="https://github.com/open-source-usach/internshipbot-api"
@@ -38,18 +52,48 @@ const members: Member[] = [
       />
     </ul>
   </section>
-	<div>
-		<h2 class="text-neutral-200 font-bold text-lg mb-4">Como contribuir</h2>
-		<p>Si quieres colaborar con nosotros manda un mensaje a <span class="bg-neutral-800 rounded px-1 py-0.5">Kappa🐸#1190</span> o <span class="bg-neutral-800 rounded px-1 py-0.5">René#0472</span> en Discord!</p>
-	</div>
+  <div class="space-y-4">
+    <h2 class="text-neutral-200 font-bold text-lg mb-4">¿Quieres ser parte?</h2>
+    <p>
+      Somos una comunidad abierta, si tienes ideas de proyectos o quieres
+      colaborar creandoles, los unicos requisitos son:
+    </p>
+    <p>
+      <strong>Si eres diseñador</strong> debes poder crear interfaces de usuario
+      usando herramientas como <Link
+        url="https://www.figma.com"
+        title="Figma"
+      />
+      o <Link url="https://penpot.app/" title="Penpot" />.
+    </p>
+    <p>
+      <strong>Si eres desarrollador</strong> debes poder programar en algun lenguaje
+      moderno como Python, JavaScript, TypeScript, Go, etc. si haz usado Express.js,
+      Fiber, Next.js, Astro o cualquier otra herramienta moderna aun mejor!
+    </p>
+    <p>
+      Mandanos un mensaje a <span
+        class="bg-neutral-800 rounded px-1 py-0.5 whitespace-nowrap"
+        >Kappa🐸#1190</span
+      > o <span class="bg-neutral-800 rounded px-1 py-0.5">René#0472</span> en Discord,
+      contandonos como quieres participar o que ideas tienes!
+    </p>
+  </div>
   <div class="my-4">
     <h2 class="text-neutral-200 font-bold text-lg">Miembros</h2>
     <div class="grid grid-cols-3 gap-4 my-4">
       {
         members.map((member) => (
-          <a href={member.link} target="_blank" rel="noopener noreferrer" class="text-center space-y-2">
+          <a
+            href={member.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-center space-y-2"
+          >
             <img src={`${member.link}.png`} alt={`Foto de ${member.name}`} />
-            <p>{member.name}</p>
+            <p>
+              {member.name} <br /> {member.role}
+            </p>
           </a>
         ))
       }
