@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
 import Link from "../components/Link";
+import ActiveProject from "../components/ActiveProject";
 
 type Role = "Development" | "Design" | "Product";
 
@@ -28,7 +29,29 @@ const members: Member[] = [
     role: "Development",
     link: "https://github.com/Klefur",
   },
+  {
+    name: "Lucas Mesías",
+    role: "Development",
+    link: "https://github.com/Skyrdow",
+  },
 ];
+
+const activeProjects = [
+  {
+    title: "Pegas",
+    description: "Encuentra tu próxima pega!",
+    link: "https://pegas.osusach.com/",
+    icon: "/mdi--shovel.svg",
+    iconAlt: "Icono de pala",
+  },
+  {
+    title: "Calculadora de notas",
+    description: "Planifica tu semestre inteligentemente.",
+    link: "https://notas.osusach.com/",
+    icon: "/mdi--calculator.svg",
+    iconAlt: "Icono de calculadora",
+  },
+  ];
 ---
 
 <Layout title="Open Source USACH">
@@ -38,17 +61,33 @@ const members: Member[] = [
     colaborando en proyectos open-source!
   </p>
   <section class="my-4">
+    <h2 class="text-neutral-200 font-bold text-lg">Proyectos activos</h2>
+    <div class="grid grid-cols-3">
+      {
+        activeProjects.map((project) => (
+          <ActiveProject
+            href={project.link}
+            title={project.title}
+            description={project.description}
+            icon={project.icon}
+            iconAlt={project.iconAlt}
+          />
+        ))
+      }
+    </div>
+  </section>
+  <section class="my-4">
     <h2 class="text-neutral-200 font-bold text-lg">Estamos contruyendo</h2>
     <ul class="my-2">
-      <Card
-        href="https://github.com/open-source-usach/internshipbot-api"
-        title="InternshipBot"
-        description="La manera más fácil de encontrar prácticas y primeros trabajos en Ingeniería de Software."
-      />
       <Card
         href="https://github.com/open-source-usach/cursosusach-honojs-api"
         title="CursosUSACH"
         description="Mira qué opinan otros estudiantes acerca de ramos de la USACH."
+      />
+      <Card
+        href="https://github.com/osusach/usach-schedule-scrapper"
+        title="HorariosUSACH"
+        description="Consulta los horarios de los cursos de la USACH."
       />
     </ul>
   </section>
@@ -100,3 +139,4 @@ const members: Member[] = [
     </div>
   </div>
 </Layout>
+../components/ActiveProject.tsx../components/ActiveProject.tsx
