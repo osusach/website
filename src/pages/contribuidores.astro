@@ -1,0 +1,81 @@
+---
+type Role = "Development" | "Design" | "Product";
+
+type Member = {
+  name: string;
+  link: string;
+  role: Role;
+};
+const founders: Member[] = [
+  {
+    name: "René Cáceres",
+    role: "Development",
+    link: "https://github.com/panquequelol",
+  },
+  {
+    name: "Ignacio Lara",
+    role: "Development",
+    link: "https://github.com/kappita",
+  },
+  {
+    name: "Joaquín Saldivia",
+    role: "Development",
+    link: "https://github.com/Klefur",
+  },
+  {
+    name: "Lucas Mesías",
+    role: "Development",
+    link: "https://github.com/Skyrdow",
+  },
+];
+const members: Member[] = [
+  {
+    name: "Nicolás Aguilera",
+    role: "Development",
+    link: "https://github.com/don-uldaricio",
+  },
+];
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Contribuidores">
+  <div class="my-4 max-w-xl mx-auto">
+      <h2 class="divider divider-neutral text-lg font-bold">Fundadores</h2>
+      <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
+        {
+          founders.map((member) => (
+            <a
+            href={member.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mx-auto max-w-36 space-y-2 text-center"
+            >
+            <img src={`${member.link}.png`} alt={`Foto de ${member.name}`} />
+            <p>
+              {member.name} <br /> {member.role}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+
+      <h2 class="divider divider-neutral text-lg font-bold">Miembros</h2>
+      <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
+        {
+          members.map((member) => (
+            <a
+            href={member.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mx-auto max-w-36 space-y-2 text-center"
+            >
+            <img src={`${member.link}.png`} alt={`Foto de ${member.name}`} />
+            <p>
+              {member.name} <br /> {member.role}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
