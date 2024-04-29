@@ -20,7 +20,7 @@ export default function ActiveProject({
   // Titulo, link, foto, logo, descripción breve, fecha, cantidad de integrantes en el equipo de desarrollo
   return (
     <a
-      className="card overflow-hidden bg-base-300 shadow-[5px_5px_3px_0px_rgba(0,0,0,0.3)]"
+      className="card overflow-hidden bg-base-300 shadow-[5px_5px_3px_0px_rgba(0,0,0,0.3)] transition ease-in-out hover:translate-x-1 hover:translate-y-1"
       href={href}
     >
       <img

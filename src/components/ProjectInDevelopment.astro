@@ -14,19 +14,19 @@ const { href, title, description, techStack, lookingForHelp, projectState } =
 
 <li>
   <a
-    class="card mx-auto flex flex-col bg-base-300 p-2 shadow-[5px_5px_3px_0px_rgba(0,0,0,0.3)]"
+    class="card mx-auto flex flex-col bg-base-300 p-2 shadow-[5px_5px_3px_0px_rgba(0,0,0,0.3)] transition ease-in-out hover:translate-x-1 hover:translate-y-1"
     href={href}
   >
     <div class="flex justify-between gap-2">
       <h2 class="font-semibold">
         {title}
-        <span class="badge badge-neutral">
+        <span class="badge badge-neutral font-semibold">
           {projectState}
         </span>
       </h2>
       <span
         class={lookingForHelp
-          ? "badge badge-success text-success-content"
+          ? "badge badge-success text-success-content font-semibold"
           : "hidden"}
         >Buscamos ayuda! <img src="/help-flag.svg" alt="help flag icon" /></span
       >

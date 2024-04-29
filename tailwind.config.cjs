@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        bounce: {
+
+          "0%, 100%": { transform: "translateY(-5%);"},
+          "50%": { transform: "translateY(5%);"}
+        }
+      }},
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -14,7 +21,7 @@ module.exports = {
           "primary-content": "#FFFFFF",
           secondary: "#da6f2c",
           "secondary-content": "#FFFFFF",
-          accent: "#da6f2c",
+          accent: "#9900ff",
           "accent-content": "#FFFFFF",
 
           "base-100": "#fffcf0",
