@@ -1,4 +1,3 @@
-
 type Role = "Development" | "Design" | "Product" | string;
 
 type Member = {

@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       keyframes: {
         bounce: {
-
-          "0%, 100%": { transform: "translateY(-5%);"},
-          "50%": { transform: "translateY(5%);"}
-        }
-      }},
+          "0%, 100%": { transform: "translateY(-5%);" },
+          "50%": { transform: "translateY(5%);" },
+        },
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
