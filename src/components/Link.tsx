@@ -7,7 +7,7 @@ export default function Link({ url, title }: Props) {
   return (
     <a
       href={url}
-      className="underline text-blue-700"
+      className="text-blue-700 underline"
       target="_blank"
       rel="noopener noreferrer"
     >

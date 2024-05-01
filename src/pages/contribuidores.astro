@@ -1,0 +1,19 @@
+---
+import { members, founders } from "../members";
+import Layout from "../layouts/Layout.astro";
+import MemberCard from "../components/MemberCard.astro";
+---
+
+<Layout title="Contribuidores">
+  <div class="my-5">
+    <h2 class="divider divider-neutral text-lg font-bold">Fundadores</h2>
+    <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
+      {founders.map((member) => <MemberCard {...member} />)}
+    </div>
+
+    <h2 class="divider divider-neutral text-lg font-bold">Miembros</h2>
+    <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
+      {members.map((member) => <MemberCard {...member} />)}
+    </div>
+  </div>
+</Layout>

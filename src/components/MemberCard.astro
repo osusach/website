@@ -1,0 +1,23 @@
+---
+export interface Props {
+  name: string;
+  link: string;
+  roles: Array<string>;
+}
+
+const { name, link, roles } = Astro.props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="mx-auto space-y-2 text-center"
+>
+  <div class="skeleton size-36">
+    <img src={`${link}.png`} alt={`Foto de ${name}`} />
+  </div>
+  <p>
+    {name}
+  </p>
+</a>

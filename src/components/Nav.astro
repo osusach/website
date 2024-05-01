@@ -1,8 +1,49 @@
-<nav>
-  <div class="flex">
-    <a href="/"><img class="h-20 w-20" src="./logo.png" alt="Logo" /></a>
-    <a class="text-neutral-200 text-3xl font-bold self-center px-3"
-      >Open Source USACH</a
+<nav
+  class="navbar relative z-40 flex-row justify-between bg-primary font-bold text-primary-content"
+>
+  <div class="flex flex-nowrap text-nowrap md:navbar-start">
+    <img class="size-14 md:size-20" src="./logo.png" alt="Logo" />
+    <h1 class="self-center text-xl md:px-3 md:text-3xl">Open Source USACH</h1>
+  </div>
+  <div class="navbar-end mr-5 hidden gap-5 md:flex">
+    <a href="/">Inicio</a>
+    <a href="/sobre-nosotros">Sobre nosotros</a>
+    <a href="/contribuidores">Contribuidores</a>
+  </div>
+
+  <div class="drawer-content md:hidden">
+    <!-- Page content here -->
+    <label
+      for="my-drawer-4"
+      aria-label="Abrir menu de navegación"
+      class="btn drawer-button icon-[mdi--menu] size-8 p-0 text-white"
     >
+    </label>
   </div>
 </nav>
+
+<div class="drawer drawer-end">
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+
+  <div class="drawer-side z-20">
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"
+    ></label>
+    <ul class="menu fixed top-16 h-full w-60 bg-base-200 p-4 text-base-content">
+      <!-- Sidebar content here -->
+      <li>
+        <a href="/">Inicio</a>
+      </li>
+      <li>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+      </li>
+      <li>
+        <a href="/contribuidores">Contribuidores</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const checkbox = document.getElementById("my-drawer-4") as HTMLInputElement;
+  checkbox.checked = false;
+</script>

@@ -1,142 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Nav from "../components/Nav.astro";
-import Link from "../components/Link";
+import ProjectInDevelopment from "../components/ProjectInDevelopment.astro";
 import ActiveProject from "../components/ActiveProject";
-
-type Role = "Development" | "Design" | "Product";
-
-type Member = {
-  name: string;
-  link: string;
-  role: Role;
-};
-
-const members: Member[] = [
-  {
-    name: "René Cáceres",
-    role: "Development",
-    link: "https://github.com/panquequelol",
-  },
-  {
-    name: "Ignacio Lara",
-    role: "Development",
-    link: "https://github.com/kappita",
-  },
-  {
-    name: "Joaquín Saldivia",
-    role: "Development",
-    link: "https://github.com/Klefur",
-  },
-  {
-    name: "Lucas Mesías",
-    role: "Development",
-    link: "https://github.com/Skyrdow",
-  },
-];
-
-const activeProjects = [
-  {
-    title: "Pegas",
-    description: "Encuentra tu próxima pega!",
-    link: "https://pegas.osusach.com/",
-    icon: "/mdi--shovel.svg",
-    iconAlt: "Icono de pala",
-  },
-  {
-    title: "Calculadora de notas",
-    description: "Planifica tu semestre inteligentemente.",
-    link: "https://notas.osusach.com/",
-    icon: "/mdi--calculator.svg",
-    iconAlt: "Icono de calculadora",
-  },
-  ];
+import { developmentProjects, activeProjects } from "../projects";
 ---
 
 <Layout title="Open Source USACH">
-  <Nav />
-  <p class="instructions">
-    Comunidad de estudiantes y amigos de la Universidad de Santiago de Chile,
-    colaborando en proyectos open-source!
-  </p>
-  <section class="my-4">
-    <h2 class="text-neutral-200 font-bold text-lg">Proyectos activos</h2>
-    <div class="grid grid-cols-3">
-      {
-        activeProjects.map((project) => (
-          <ActiveProject
-            href={project.link}
-            title={project.title}
-            description={project.description}
-            icon={project.icon}
-            iconAlt={project.iconAlt}
-          />
-        ))
-      }
-    </div>
-  </section>
-  <section class="my-4">
-    <h2 class="text-neutral-200 font-bold text-lg">Estamos contruyendo</h2>
-    <ul class="my-2">
-      <Card
-        href="https://github.com/open-source-usach/cursosusach-honojs-api"
-        title="CursosUSACH"
-        description="Mira qué opinan otros estudiantes acerca de ramos de la USACH."
-      />
-      <Card
-        href="https://github.com/osusach/usach-schedule-scrapper"
-        title="HorariosUSACH"
-        description="Consulta los horarios de los cursos de la USACH."
-      />
-    </ul>
-  </section>
-  <div class="space-y-4">
-    <h2 class="text-neutral-200 font-bold text-lg mb-4">¿Quieres ser parte?</h2>
-    <p>
-      Somos una comunidad abierta, si tienes ideas de proyectos o quieres
-      colaborar creándolos, los únicos requisitos son:
-    </p>
-    <p>
-      <strong>Si eres diseñador</strong> debes poder crear interfaces de usuario
-      usando herramientas como <Link
-        url="https://www.figma.com"
-        title="Figma"
-      />
-      o <Link url="https://penpot.app/" title="Penpot" />.
-    </p>
-    <p>
-      <strong>Si eres desarrollador</strong> debes poder programar en algún lenguaje
-      moderno como Python, JavaScript/TypeScript, Go, etc. Si has usado Express.js,
-      Fiber, Next.js, Astro o cualquier otra herramienta moderna aún mejor!
-    </p>
-    <p>
-      Mándanos un mensaje a <span
-        class="bg-neutral-800 rounded px-1 py-0.5 whitespace-nowrap"
-        >Kappa🐸#1190</span
-      > o <span class="bg-neutral-800 rounded px-1 py-0.5">René#0472</span> en Discord,
-      contándonos cómo quieres participar o qué ideas tienes!
-    </p>
-  </div>
-  <div class="my-4">
-    <h2 class="text-neutral-200 font-bold text-lg">Miembros</h2>
-    <div class="grid grid-cols-3 gap-4 my-4">
-      {
-        members.map((member) => (
+  <div class="mx-0 w-full pb-4 md:mx-auto">
+    <div
+      class="mx-auto flex flex-col items-center justify-between pt-14 md:my-[6rem] md:flex-row md:pt-0"
+    >
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-semibold md:w-[25vw] md:text-4xl">
+          Comunidad de estudiantes de la Universidad de Santiago de Chile
+        </h2>
+        <p>colaborando en proyectos <br class="md:hidden" /> open-source</p>
+      </div>
+      <div class="mt-10 flex flex-col items-center md:mt-0">
+        <p class="text-center text-xl font-semibold">¿Quiéres ser parte?</p>
+        <div
+          class="my-2 flex w-full animate-bounce items-center justify-center rounded-badge bg-secondary py-4 ease-in-out hover:animate-none motion-reduce:animate-none"
+        >
           <a
-            href={member.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-center space-y-2"
+            href="/unete"
+            class="link-hover link text-center text-3xl font-semibold text-secondary-content md:text-5xl"
+            >Únete</a
           >
-            <img src={`${member.link}.png`} alt={`Foto de ${member.name}`} />
-            <p>
-              {member.name} <br /> {member.role}
-            </p>
-          </a>
-        ))
-      }
+        </div>
+      </div>
     </div>
+    <section class="my-4">
+      <h2 class="divider divider-neutral mt-10 text-lg font-bold">
+        Proyectos activos
+      </h2>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {activeProjects.map((project) => <ActiveProject {...project} />)}
+      </div>
+    </section>
+    <section class="my-4">
+      <h2 class="divider divider-neutral my-10 text-lg font-bold">
+        Estamos contruyendo
+      </h2>
+      <ul class="my-2 flex w-full flex-col gap-4">
+        {
+          developmentProjects.map((project) => (
+            <ProjectInDevelopment {...project} />
+          ))
+        }
+      </ul>
+    </section>
   </div>
 </Layout>
-../components/ActiveProject.tsx../components/ActiveProject.tsx

@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Únete">
+  <h1
+    class="mx-auto my-4 w-fit rounded-box bg-secondary px-4 py-2 text-center text-3xl font-bold text-secondary-content"
+  >
+    Quiero unirme!
+  </h1>
+  <div
+    class="mx-auto flex flex-col justify-center py-5 md:max-w-5xl md:flex-row md:gap-24"
+  >
+    <section class="md:w-1/2">
+      <h2 class="divider divider-neutral text-xl">¿Qué perfil buscamos?</h2>
+      <ul class="list-inside list-disc">
+        <li>Buscamos personas que tengan ganas de aprender y experimentar</li>
+        <li>Se espera aprendizaje autónomo</li>
+        <li>Compromiso con los proyectos</li>
+        <li>Habilidades de comunicación con el equipo</li>
+      </ul>
+      <h2
+        class="divider divider-neutral h-fit text-wrap text-center text-xl md:text-xl"
+      >
+        ¿Con qué tecnologías trabajamos?
+      </h2>
+      <p class="text-sm italic">
+        Estas tecnologías no son requerimientos para unirte
+      </p>
+      <h3 class="text-lg">Frontend</h3>
+      <ul class="list-inside list-disc">
+        <li>Frameworks: Astro, Svelte, React, Vue</li>
+        <li>Typescript</li>
+        <li>TailwindCSS</li>
+        <li>Prettier</li>
+        <li>Vercel</li>
+        <li>Bibliotecas de UI: Shadcn/ui, DaisyUI</li>
+      </ul>
+      <h3 class="text-lg">Backend</h3>
+      <ul class="list-inside list-disc">
+        <li>Honojs, Sveltekit</li>
+        <li>Typescript</li>
+        <li>Bases de datos: Turso</li>
+      </ul>
+    </section>
+    <section class="md:w-1/2">
+      <h3 class="divider divider-neutral h-fit text-wrap text-center text-xl">
+        Envía tu portafolio por correo!
+      </h3>
+      <ul class="mx-auto w-fit list-inside list-disc">
+        <li>lucas.mesias@usach.cl</li>
+        <li>ignacio.lara.v@usach.cl</li>
+        <li>joaquin.saldivia@usach.cl</li>
+      </ul>
+      <h4 class="divider divider-neutral text-lg">¿Qué es un portafolio?</h4>
+      <p>
+        Esperamos al menos un resumen de tus habilidades, las tecnologías que
+        sabes manejar y los proyectos que has realizado en forma de gits.
+      </p>
+      <span class="divider divider-neutral"></span>
+      <p class="text-lg">
+        Te contactaremos para una entrevista para conocerte mejor y te
+        avisaremos cuando se abra un proyecto nuevo.
+      </p>
+    </section>
+  </div>
+</Layout>
