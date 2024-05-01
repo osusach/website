@@ -1,33 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectInDevelopment from "../components/ProjectInDevelopment.astro";
-import Nav from "../components/Nav.astro";
-import Link from "../components/Link";
 import ActiveProject from "../components/ActiveProject";
 import { developmentProjects, activeProjects } from "../projects";
 ---
+
 <Layout title="Open Source USACH">
-  <div class="mx-0 w-full px-8 pb-4 md:mx-auto md:px-20">
+  <div class="mx-0 w-full pb-4 md:mx-auto">
     <div
-      class="mx-auto my-5 flex flex-col items-center justify-evenly md:flex-row"
+      class="mx-auto flex flex-col items-center justify-between pt-14 md:my-[6rem] md:flex-row md:pt-0"
     >
       <div class="text-center md:text-left">
-        <h2 class="w-[480px] text-4xl font-semibold">
+        <h2 class="text-3xl font-semibold md:w-[25vw] md:text-4xl">
           Comunidad de estudiantes de la Universidad de Santiago de Chile
         </h2>
-        <p>colaborando en proyectos open-source</p>
+        <p>colaborando en proyectos <br class="md:hidden" /> open-source</p>
       </div>
-      <div class="flex flex-col items-center">
+      <div class="mt-10 flex flex-col items-center md:mt-0">
         <p class="text-center text-xl font-semibold">¿Quiéres ser parte?</p>
-        <a
-          href="/unete"
-          class="animate-bounce hover:animate-none motion-reduce:animate-none ease-in-out mt-2 link-hover link rounded-badge bg-secondary px-7 py-3 text-center text-6xl font-semibold text-secondary-content"
-          >Únete</a
+        <div
+          class="my-2 flex w-full animate-bounce items-center justify-center rounded-badge bg-secondary py-4 ease-in-out hover:animate-none motion-reduce:animate-none"
         >
+          <a
+            href="/unete"
+            class="link-hover link text-center text-3xl font-semibold text-secondary-content md:text-5xl"
+            >Únete</a
+          >
+        </div>
       </div>
     </div>
     <section class="my-4">
-      <h2 class="divider divider-neutral my-5 text-lg font-bold">
+      <h2 class="divider divider-neutral mt-10 text-lg font-bold">
         Proyectos activos
       </h2>
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -35,7 +38,7 @@ import { developmentProjects, activeProjects } from "../projects";
       </div>
     </section>
     <section class="my-4">
-      <h2 class="divider divider-neutral my-5 text-lg font-bold">
+      <h2 class="divider divider-neutral my-10 text-lg font-bold">
         Estamos contruyendo
       </h2>
       <ul class="my-2 flex w-full flex-col gap-4">

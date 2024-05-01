@@ -1,3 +1,4 @@
+const { addDynamicIconSelectors } = require("@iconify/tailwind");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -5,13 +6,13 @@ module.exports = {
     extend: {
       keyframes: {
         bounce: {
-
-          "0%, 100%": { transform: "translateY(-5%);"},
-          "50%": { transform: "translateY(5%);"}
-        }
-      }},
+          "0%, 100%": { transform: "translateY(-5%);" },
+          "50%": { transform: "translateY(5%);" },
+        },
+      },
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), addDynamicIconSelectors()],
   daisyui: {
     themes: [
       {

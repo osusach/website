@@ -1,50 +1,19 @@
 ---
-import { members, founders } from "../members"
-import Layout from "../layouts/Layout.astro"
+import { members, founders } from "../members";
+import Layout from "../layouts/Layout.astro";
+import MemberCard from "../components/MemberCard.astro";
 ---
 
 <Layout title="Contribuidores">
-  <div class="my-4 max-w-xl mx-auto">
-      <h2 class="divider divider-neutral text-lg font-bold">Fundadores</h2>
-      <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
-        {
-          founders.map((member) => (
-            <a
-            href={member.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mx-auto max-w-36 space-y-2 text-center"
-            >
-            <img src={`${member.link}.png`} alt={`Foto de ${member.name}`} />
-            <p>
-              {member.name} </p>
-            <p>
-              {member.roles.join(", ")}
-            </p>
-          </a>
-        ))
-      }
+  <div class="my-5">
+    <h2 class="divider divider-neutral text-lg font-bold">Fundadores</h2>
+    <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
+      {founders.map((member) => <MemberCard {...member} />)}
     </div>
 
-      <h2 class="divider divider-neutral text-lg font-bold">Miembros</h2>
-      <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
-        {
-          members.map((member) => (
-            <a
-            href={member.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mx-auto max-w-36 space-y-2 text-center"
-            >
-            <img src={`${member.link}.png`} alt={`Foto de ${member.name}`} />
-            <p>
-              {member.name} </p>
-            <p>
-              {member.roles.join(", ")}
-            </p>
-          </a>
-        ))
-      }
+    <h2 class="divider divider-neutral text-lg font-bold">Miembros</h2>
+    <div class="my-4 flex flex-wrap gap-4 sm:flex-nowrap">
+      {members.map((member) => <MemberCard {...member} />)}
     </div>
   </div>
 </Layout>
