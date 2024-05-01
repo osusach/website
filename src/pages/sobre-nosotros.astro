@@ -1,13 +1,40 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sobre Nosotros">
-    <h1>Quienes somos</h1>
-    <p>Somos una comunidad de estudiantes y amigos de la Universidad de Santiago de Chile, colaborando en proyectos open-source! </p>
-    <h1>Cuál es nuestro objetivo</h1>
-    <p>Ayudar a otros estudiantes a obtener experiencia en el campo laboral</p>
-    <p>Crear proyectos que ayuden a mejorar la calidad de vida de los estudiantes</p>
-    <p>Experimentar con nuevas tecnologías</p>
-    <p>Crear proyectos que ayuden a construir un portafolio sólido</p>
+  <div class="flex flex-col justify-evenly min-h-[70vh] h-full">
+    <div class="que-somos">
+      <h1 class="text-center text-xl sm:text-4xl font-bold mb-5">Qué somos</h1>
+      <p class="text-center sm:text-3xl">
+        Somos una comunidad de estudiantes de la Universidad de Santiago de Chile y colaboradores interesados,
+        trabajando juntos en proyectos open-source.
+      </p>
+    </div>
+  
+    <div class="objetivos">
+      
+      <h1 class="text-center text-xl sm:text-4xl font-bold mb-5">Cuáles son nuestros objetivos</h1>
+      <p class="text-center sm:text-3xl mb-3">
+        Desarrollar proyectos que ayuden y faciliten la vida de los estudiantes
+      </p>
+      <p class="text-center sm:text-3xl mb-3">
+        Ayudar a los estudiantes y personas interesadas en el desarrollo
+        de software a obtener experiencias más cercanas al mundo laboral
+      </p>
+      
+      <p class="text-center sm:text-3xl mb-3">
+        Experimentar con nuevas tecnologías, especialmente en una industria
+        que evoluciona cada día. 
+      </p>
+      <p class="text-center sm:text-3xl mb-3">
+        Crear proyectos que ayuden a construir un portafolio sólido, y que logren
+        demostrar las altas capacidades de sus autores
+      </p>
+    </div>
+
+
+
+
+  </div>
 </Layout>
