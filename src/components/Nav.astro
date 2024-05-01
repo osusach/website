@@ -1,7 +1,7 @@
 <nav
-  class="navbar relative z-40 flex-row justify-between bg-primary font-bold text-primary-content"
+  class="navbar relative flex-row justify-between bg-primary font-bold text-primary-content"
 >
-  <div class="flex flex-nowrap text-nowrap md:navbar-start">
+  <div class="flex flex-nowrap text-nowrap md:navbar-start items-center">
     <img class="size-14 md:size-20" src="./logo.png" alt="Logo" />
     <h1 class="self-center text-xl md:px-3 md:text-3xl">Open Source USACH</h1>
   </div>
@@ -11,39 +11,21 @@
     <a href="/contribuidores">Contribuidores</a>
   </div>
 
-  <div class="drawer-content md:hidden">
-    <!-- Page content here -->
-    <label
-      for="my-drawer-4"
-      aria-label="Abrir menu de navegación"
-      class="btn drawer-button icon-[mdi--menu] size-8 p-0 text-white"
+  <div class="dropdown dropdown-bottom dropdown-end md:hidden">
+    <div tabindex="0" role="button" class="inline-flex size-8 align-middle"><span class=" icon-[mdi--menu] size-8 p-0 text-primary-content"></span></div>
+    <ul
+      tabindex="0"
+      class="fixed menu dropdown-content z-[20] w-screen rounded-none bg-base-300 mt-4 -mr-2 shadow"
     >
-    </label>
-  </div>
-</nav>
-
-<div class="drawer drawer-end">
-  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-
-  <div class="drawer-side z-20">
-    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"
-    ></label>
-    <ul class="menu fixed top-16 h-full w-60 bg-base-200 p-4 text-base-content">
-      <!-- Sidebar content here -->
-      <li>
+      <li class="text-base-content">
         <a href="/">Inicio</a>
       </li>
-      <li>
+      <li class="text-base-content">
         <a href="/sobre-nosotros">Sobre nosotros</a>
       </li>
-      <li>
+      <li class="text-base-content">
         <a href="/contribuidores">Contribuidores</a>
       </li>
     </ul>
   </div>
-</div>
-
-<script>
-  const checkbox = document.getElementById("my-drawer-4") as HTMLInputElement;
-  checkbox.checked = false;
-</script>
+</nav>

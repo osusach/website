@@ -35,7 +35,7 @@ export const activeProjects: Array<ActiveProject> = [
   {
     title: "Recursos virtuales para el aprendizaje del lenguaje",
     description:
-      "Plataforma creada a petición de un académico de la facultad de humanidades.",
+      "Plataforma creada a petición de un académico de la Facultad de Humanidades.",
     href: "https://www.recursosaprendizajecastellano.usach.cl/",
     imageSrc: "/recursos-ss.webp",
     contributors: 5,
