@@ -1,15 +1,42 @@
 <nav>
   <div
-    class="navbar flex-col bg-primary font-bold text-primary-content md:flex-row"
+    class="navbar flex h-[10vh] w-[100vw] justify-start overflow-hidden bg-primary font-bold text-primary-content sm:justify-center z-40"
   >
-    <div class="flex flex-nowrap text-nowrap md:navbar-start">
-      <img class="h-20 w-20" src="./logo.png" alt="Logo" />
-      <h1 class="self-center px-3 text-3xl">Open Source USACH</h1>
+  <div class="drawer drawer-end h-full">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle " />
+    <div class="drawer-content h-ful flex justify-center">
+      <!-- Page content here -->
+      <div class="flex justify-between sm:justify-between w-full xl:w-[50vw] h-full">
+        <div class="flex flex-nowrap text-nowrap md:navbar-start">
+          <img class="h-20 w-20" src="./logo.png" alt="Logo" />
+          <h1 class="self-center text-lg x-3 md:text-3xl ml-3">Open Source USACH</h1>
+        </div>
+        <div
+          class="hidden gap-5 text-nowrap text-sm md:navbar-end sm:flex md:mr-5 md:text-xl"
+        >
+          <a class="flex items-center" href="/">Inicio</a>
+          <a class="flex items-center" href="/sobre-nosotros">Sobre nosotros</a>
+          <a class="flex items-center" href="/contribuidores">Contribuidores</a>
+        </div>
+        <label for="my-drawer" class=" drawer-button h-full items-center flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24" class="mr-3 sm:hidden block ">
+            <path fill="#ffffff" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z" />
+          </svg>
+        </label>
+      </div>
+      
+    </div> 
+    <div class="drawer-side z-20 mt-[10vh]">
+      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+      <ul class="menu py-0 p-4 w-80 h-[90vh] bg-primary text-base-content">
+        <!-- Sidebar content here -->
+        <li class="h-16 flex justify-center hover:text-slate-200"><a class="text-primary-content text-xl" href="/">Inicio</a></li>
+        <li class="h-16 flex justify-center"><a class="text-primary-content text-xl" href="/sobre-nosotros">Sobre nosotros</a></li>
+        <li class="h-16 flex justify-center"><a class="text-primary-content text-xl" href="/contribuidores">Contribuidores</a></li>
+        
+      </ul>
     </div>
-    <div class="flex gap-5 text-nowrap md:navbar-end md:mr-5">
-      <a href="/">Inicio</a>
-      <a href="/sobre-nosotros">Sobre nosotros</a>
-      <a href="/contribuidores">Contribuidores</a>
-    </div>
+  </div>
+    
   </div>
 </nav>
