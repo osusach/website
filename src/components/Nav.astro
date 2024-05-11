@@ -1,7 +1,7 @@
 <nav
   class="navbar relative flex-row justify-between bg-primary font-bold text-primary-content"
 >
-  <div class="flex flex-nowrap text-nowrap md:navbar-start items-center">
+  <div class="flex flex-nowrap items-center text-nowrap md:navbar-start">
     <img class="size-14 md:size-20" src="./logo.svg" alt="Logo" />
     <h1 class="self-center text-xl md:px-3 md:text-3xl">Open Source USACH</h1>
   </div>
@@ -11,11 +11,13 @@
     <a href="/contribuidores">Contribuidores</a>
   </div>
 
-  <div class="dropdown dropdown-bottom dropdown-end md:hidden">
-    <div tabindex="0" role="button" class="inline-flex size-8 align-middle"><span class=" icon-[mdi--menu] size-8 p-0 text-primary-content"></span></div>
+  <div class="dropdown dropdown-end dropdown-bottom md:hidden">
+    <div tabindex="0" role="button" class="inline-flex size-8 align-middle">
+      <span class="icon-[mdi--menu] size-8 p-0 text-primary-content"></span>
+    </div>
     <ul
       tabindex="0"
-      class="fixed menu dropdown-content z-[20] w-screen rounded-none bg-base-300 mt-4 -mr-2 shadow"
+      class="menu dropdown-content fixed z-[20] -mr-2 mt-4 w-screen rounded-none bg-base-300 shadow"
     >
       <li class="text-base-content">
         <a href="/">Inicio</a>
