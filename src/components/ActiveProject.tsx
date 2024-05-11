@@ -15,7 +15,7 @@ export default function ActiveProject({
   releaseDate,
   contributors,
 }: Props) {
-  const defaultImg = "/logo.png";
+  const defaultImg = "/logo.svg";
   // Proyectos activos: (grid)
   // Titulo, link, foto, logo, descripción breve, fecha, cantidad de integrantes en el equipo de desarrollo
   return (
