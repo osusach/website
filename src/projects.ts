@@ -41,6 +41,15 @@ export const activeProjects: Array<ActiveProject> = [
     contributors: 5,
     releaseDate: "26-04-2024",
   },
+  {
+    title: "Congreso Internacional de Fonética y Poética",
+    description:
+      "Landing page del congreso, hecho para convocar asistentes y presentadores.",
+    href: "https://foneticaypoetica.usach.cl/",
+    imageSrc: "/fyp-ss.webp",
+    contributors: 4,
+    releaseDate: "02-07-2024",
+  },
 ];
 
 export const developmentProjects: Array<DevelopmentProject> = [
@@ -58,5 +67,19 @@ export const developmentProjects: Array<DevelopmentProject> = [
     ],
     lookingForHelp: true,
     projectState: "50%",
+  },
+  {
+    href: "https://github.com/osusach/apolo-frontend",
+    title: "Apolo",
+    description:
+      "Herramienta para ayudar a profesores a crear pruebas.",
+    techStack: [
+      "/svelte.svg",
+      "/hono.svg",
+      "/cfworkers.svg",
+      "/turso.svg",
+    ],
+    lookingForHelp: true,
+    projectState: "10%",
   },
 ];
