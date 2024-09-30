@@ -45,4 +45,9 @@ export const members: Member[] = [
     roles: ["Front-End"],
     link: "https://github.com/mguzm4n",
   },
+  {
+    name: "Benjamín Canales",
+    roles: ["Development"],
+    link: "https://github.com/benjaminCanalesC",
+  },
 ];
