@@ -10,6 +10,11 @@ module.exports = {
           "50%": { transform: "translateY(5%);" },
         },
       },
+      colors: {
+        "footer-gray": "#b3b3b3",
+        "main-white": "#f3f3f3",
+        "main-cyan": "#00A499",
+      },
     },
   },
   plugins: [require("daisyui"), addDynamicIconSelectors()],
@@ -22,7 +27,7 @@ module.exports = {
           "primary-content": "#FFFFFF",
           secondary: "#da6f2c",
           "secondary-content": "#FFFFFF",
-          accent: "#9900ff",
+          accent: "#6b00b2",
           "accent-content": "#FFFFFF",
 
           "base-100": "#fffcf0",
