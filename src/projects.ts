@@ -50,6 +50,14 @@ export const activeProjects: Array<ActiveProject> = [
     contributors: 4,
     releaseDate: "02-07-2024",
   },
+  {
+    title: "English Pronunciation",
+    description: "Aplicación web creada a petición de una académica de la Universidad de Talca para un FONDECYT sobre pronunciación de la lengua inglesa",
+    href: "https://englishpronunciation.cl",
+    imageSrc: "/englishpronunciation.webp",
+    contributors: 5,
+    releaseDate: "01-03-2025"
+  }
 ];
 
 export const developmentProjects: Array<DevelopmentProject> = [
